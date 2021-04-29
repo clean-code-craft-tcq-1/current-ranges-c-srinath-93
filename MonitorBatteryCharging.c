@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include "catch.hpp"
-#include"MonitorBatteryCharging_prv.h"
+#include "MonitorBatteryCharging_prv.h"
 
 batteryChargeReading_st checkBatteryChargeReading(int *chargeReading, int numOfReadings)
 {
   int loopCntr = 0;
-  int continuousReading =1, tempVar, retStatus;
+  int continuousReading =1, tempVar;
   batteryChargeReading_st batteryChargeDetails;
   batteryChargeDetails.paramStatus = OK_VALID;
   tempVar = chargeReading[loopCntr];
