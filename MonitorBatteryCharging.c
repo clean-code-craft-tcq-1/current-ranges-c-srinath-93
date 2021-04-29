@@ -14,7 +14,7 @@ batteryChargeReading_st checkBatteryChargeReading(int *chargeReading, int numOfR
     {
       continuousReading++; /* denotes continuous reading are present */
     }
-    tempVar = chargeReading[loopCntr];
+    tempVar = chargeReading[loopCntr+1];
   }
   if((loopCntr == 0) || (chargeReading == NULL))
   {
