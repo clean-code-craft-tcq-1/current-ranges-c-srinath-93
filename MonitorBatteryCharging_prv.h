@@ -4,8 +4,8 @@
 /* Enum declarations */
 typedef enum
 {
-  OK_VALID;
-  ERROR_INVALID;
+  OK_VALID,
+  ERROR_INVALID
 }retChargeReadingStatus_en;
 /* Structure declarations */
 typedef struct
