@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "catch.hpp"
 #include "MonitorBatteryCharging_prv.h"
 
 batteryChargeReading_st checkBatteryChargeReading(int *chargeReading, int numOfReadings)
