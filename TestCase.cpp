@@ -2,7 +2,7 @@
 #include "catch.hpp"
 #include "MonitorBatteryCharging_prv.h"
 
-TEST_CASE("To check Continous readings in given range") {
+TEST_CASE("To check Continous readings in given range - PASS") {
     int CurrentChargeRange[] = {1,2,5,4,6,8,7,9};
     batteryChargeReading_st batteryChargeDetails;
     int sizeOfArrayIndex = sizeof(CurrentChargeRange) / sizeof(CurrentChargeRange[0]);
@@ -11,7 +11,7 @@ TEST_CASE("To check Continous readings in given range") {
   REQUIRE(batteryChargeDetails.continuousReadingCnt == 2);
 }
 
-TEST_CASE("To check if Current reading range is empty") 
+TEST_CASE("To check if Current reading range is empty - PASS") 
 {
     int CurrentChargeRange[] = {};
     batteryChargeReading_st batteryChargeDetails;
@@ -20,3 +20,16 @@ TEST_CASE("To check if Current reading range is empty")
   batteryChargeDetails = checkBatteryChargeReading(&CurrentChargeRange[0],sizeOfArrayIndex);
   REQUIRE(batteryChargeDetails.paramStatus == ERROR_INVALID);
 }
+
+/*  
+// Can be uncommented to check failure state of this test case
+TEST_CASE("To check if Current reading range is empty - FAIL") 
+{
+    int CurrentChargeRange[] = {};
+    batteryChargeReading_st batteryChargeDetails;
+    int sizeOfArrayIndex = sizeof(CurrentChargeRange) / sizeof(CurrentChargeRange[0]);
+  
+  batteryChargeDetails = checkBatteryChargeReading(&CurrentChargeRange[0],sizeOfArrayIndex);
+  REQUIRE(batteryChargeDetails.paramStatus == OK_VALID);
+}
+*/
