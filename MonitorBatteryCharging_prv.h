@@ -19,3 +19,4 @@ typedef struct
 
 /* function declarations */
 batteryChargeReading_st checkBatteryChargeReading(int *chargeReading, int numOfReadings);
+#endif
