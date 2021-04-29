@@ -15,8 +15,6 @@ typedef struct
   retChargeReadingStatus_en paramStatus;
 }batteryChargeReading_st;
 
-
-
 /* function declarations */
 batteryChargeReading_st checkBatteryChargeReading(int *chargeReading, int numOfReadings);
 #endif
